@@ -1,0 +1,126 @@
+name,role,bowl,country,capped,base_lakh,team,rating
+Ruturaj Gaikwad,BAT,,India,Y,200,CSK,88
+MS Dhoni,WK,,India,N,200,CSK,78
+Ravindra Jadeja,AR,spin,India,Y,200,CSK,88
+Shivam Dube,BAT,,India,Y,200,CSK,84
+Matheesha Pathirana,BOWL,pace,Sri Lanka,Y,200,CSK,85
+Noor Ahmad,BOWL,spin,Afghanistan,Y,200,CSK,85
+Devon Conway,BAT,,New Zealand,Y,200,CSK,83
+Rachin Ravindra,AR,spin,New Zealand,Y,150,CSK,82
+Khaleel Ahmed,BOWL,pace,India,Y,200,CSK,80
+Jasprit Bumrah,BOWL,pace,India,Y,200,MI,97
+Suryakumar Yadav,BAT,,India,Y,200,MI,92
+Hardik Pandya,AR,pace,India,Y,200,MI,90
+Rohit Sharma,BAT,,India,Y,200,MI,86
+Tilak Varma,BAT,,India,Y,200,MI,86
+Trent Boult,BOWL,pace,New Zealand,Y,200,MI,86
+Deepak Chahar,BOWL,pace,India,Y,200,MI,79
+Will Jacks,AR,spin,England,Y,200,MI,80
+Ryan Rickelton,WK,,South Africa,Y,100,MI,80
+Naman Dhir,AR,spin,India,N,30,MI,72
+Virat Kohli,BAT,,India,Y,200,RCB,93
+Rajat Patidar,BAT,,India,Y,200,RCB,84
+Phil Salt,WK,,England,Y,200,RCB,87
+Josh Hazlewood,BOWL,pace,Australia,Y,200,RCB,88
+Bhuvneshwar Kumar,BOWL,pace,India,Y,200,RCB,82
+Krunal Pandya,AR,spin,India,Y,200,RCB,81
+Liam Livingstone,AR,spin,England,Y,200,RCB,80
+Jitesh Sharma,WK,,India,Y,100,RCB,80
+Tim David,BAT,,Australia,Y,200,RCB,81
+Yash Dayal,BOWL,pace,India,N,30,RCB,76
+Sunil Narine,AR,spin,West Indies,Y,200,KKR,88
+Andre Russell,AR,pace,West Indies,Y,200,KKR,85
+Varun Chakaravarthy,BOWL,spin,India,Y,200,KKR,89
+Rinku Singh,BAT,,India,Y,200,KKR,83
+Venkatesh Iyer,BAT,,India,Y,200,KKR,80
+Harshit Rana,BOWL,pace,India,Y,100,KKR,80
+Ramandeep Singh,AR,pace,India,N,30,KKR,72
+Quinton de Kock,WK,,South Africa,Y,200,KKR,82
+Ajinkya Rahane,BAT,,India,Y,150,KKR,78
+Anrich Nortje,BOWL,pace,South Africa,Y,200,KKR,80
+Pat Cummins,BOWL,pace,Australia,Y,200,SRH,89
+Travis Head,BAT,,Australia,Y,200,SRH,90
+Heinrich Klaasen,WK,,South Africa,Y,200,SRH,90
+Abhishek Sharma,BAT,,India,Y,200,SRH,89
+Ishan Kishan,WK,,India,Y,200,SRH,82
+Nitish Kumar Reddy,AR,pace,India,Y,150,SRH,80
+Mohammed Shami,BOWL,pace,India,Y,200,SRH,84
+Harshal Patel,BOWL,pace,India,Y,200,SRH,81
+Adam Zampa,BOWL,spin,Australia,Y,200,SRH,80
+Sanju Samson,WK,,India,Y,200,RR,87
+Yashasvi Jaiswal,BAT,,India,Y,200,RR,91
+Riyan Parag,BAT,,India,Y,150,RR,83
+Dhruv Jurel,WK,,India,Y,100,RR,79
+Shimron Hetmyer,BAT,,West Indies,Y,150,RR,80
+Sandeep Sharma,BOWL,pace,India,Y,100,RR,78
+Jofra Archer,BOWL,pace,England,Y,200,RR,85
+Wanindu Hasaranga,AR,spin,Sri Lanka,Y,200,RR,84
+Maheesh Theekshana,BOWL,spin,Sri Lanka,Y,200,RR,80
+Vaibhav Suryavanshi,BAT,,India,N,30,RR,76
+Axar Patel,AR,spin,India,Y,200,DC,87
+Kuldeep Yadav,BOWL,spin,India,Y,200,DC,88
+KL Rahul,WK,,India,Y,200,DC,87
+Mitchell Starc,BOWL,pace,Australia,Y,200,DC,87
+Tristan Stubbs,WK,,South Africa,Y,150,DC,82
+Jake Fraser-McGurk,BAT,,Australia,Y,200,DC,78
+Abishek Porel,WK,,India,N,30,DC,74
+T Natarajan,BOWL,pace,India,Y,200,DC,78
+Faf du Plessis,BAT,,South Africa,Y,200,DC,78
+Mukesh Kumar,BOWL,pace,India,Y,200,DC,76
+Shreyas Iyer,BAT,,India,Y,200,PBKS,88
+Arshdeep Singh,BOWL,pace,India,Y,200,PBKS,88
+Yuzvendra Chahal,BOWL,spin,India,Y,200,PBKS,85
+Prabhsimran Singh,WK,,India,N,30,PBKS,78
+Shashank Singh,BAT,,India,N,30,PBKS,76
+Marcus Stoinis,AR,pace,Australia,Y,200,PBKS,81
+Marco Jansen,AR,pace,South Africa,Y,150,PBKS,83
+Glenn Maxwell,AR,spin,Australia,Y,200,PBKS,79
+Priyansh Arya,BAT,,India,N,30,PBKS,76
+Josh Inglis,WK,,Australia,Y,200,PBKS,81
+Rishabh Pant,WK,,India,Y,200,LSG,87
+Nicholas Pooran,WK,,West Indies,Y,200,LSG,89
+Ravi Bishnoi,BOWL,spin,India,Y,200,LSG,81
+Mayank Yadav,BOWL,pace,India,Y,100,LSG,78
+Mitchell Marsh,AR,pace,Australia,Y,200,LSG,84
+Aiden Markram,BAT,,South Africa,Y,200,LSG,82
+David Miller,BAT,,South Africa,Y,150,LSG,80
+Avesh Khan,BOWL,pace,India,Y,200,LSG,78
+Ayush Badoni,BAT,,India,N,30,LSG,76
+Mohsin Khan,BOWL,pace,India,N,30,LSG,74
+Shubman Gill,BAT,,India,Y,200,GT,90
+Rashid Khan,BOWL,spin,Afghanistan,Y,200,GT,89
+Sai Sudharsan,BAT,,India,Y,200,GT,87
+Jos Buttler,WK,,England,Y,200,GT,89
+Mohammed Siraj,BOWL,pace,India,Y,200,GT,85
+Kagiso Rabada,BOWL,pace,South Africa,Y,200,GT,86
+Prasidh Krishna,BOWL,pace,India,Y,200,GT,82
+Washington Sundar,AR,spin,India,Y,200,GT,81
+Shahrukh Khan,BAT,,India,N,30,GT,74
+Rahul Tewatia,AR,spin,India,N,30,GT,75
+Cameron Green,AR,pace,Australia,Y,200,,85
+Ben Stokes,AR,pace,England,Y,200,,82
+Daryl Mitchell,AR,spin,New Zealand,Y,200,,79
+Jonny Bairstow,WK,,England,Y,200,,80
+Kane Williamson,BAT,,New Zealand,Y,200,,78
+David Warner,BAT,,Australia,Y,200,,76
+Steve Smith,BAT,,Australia,Y,200,,75
+Rahmanullah Gurbaz,WK,,Afghanistan,Y,200,,79
+Lockie Ferguson,BOWL,pace,New Zealand,Y,200,,80
+Mustafizur Rahman,BOWL,pace,Bangladesh,Y,200,,78
+Naveen-ul-Haq,BOWL,pace,Afghanistan,Y,200,,76
+Gerald Coetzee,BOWL,pace,South Africa,Y,125,,77
+Alzarri Joseph,BOWL,pace,West Indies,Y,200,,76
+Mujeeb Ur Rahman,BOWL,spin,Afghanistan,Y,200,,75
+Tabraiz Shamsi,BOWL,spin,South Africa,Y,200,,76
+Akeal Hosein,BOWL,spin,West Indies,Y,150,,76
+Azmatullah Omarzai,AR,pace,Afghanistan,Y,150,,79
+Mitchell Santner,AR,spin,New Zealand,Y,200,,80
+Rovman Powell,BAT,,West Indies,Y,150,,75
+Shardul Thakur,AR,pace,India,Y,200,,74
+Umesh Yadav,BOWL,pace,India,Y,200,,70
+Prithvi Shaw,BAT,,India,Y,75,,70
+Sarfaraz Khan,BAT,,India,Y,75,,72
+Mayank Agarwal,BAT,,India,Y,100,,71
+Kartik Tyagi,BOWL,pace,India,N,30,,70
+Kumar Kartikeya,BOWL,spin,India,N,30,,70
+Suyash Sharma,BOWL,spin,India,N,30,,72

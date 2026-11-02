@@ -10,6 +10,8 @@ const room = new Room('SIM', loadPlayers(), 'host');
 let now = 0;
 const run = () => { let guard = 0; while (room.phase === 'auction' && guard++ < 2e6) { now += 200; room.tick(now); } };
 
+// SIM_RELEASE=1 npm run simulate  → test the "AI teams release everyone" option
+if (process.env.SIM_RELEASE) room.setSettings('host', { aiRetention: 'release' });
 room.startRetention('host');          // all 10 teams are AI
 room.beginBidding('host', now);
 run();

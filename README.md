@@ -57,7 +57,7 @@ The server is the single source of truth. Browsers send intents such as "bid" or
 
 ## Player data
 
-`server/src/data/players.csv` ships with **sample data based on IPL 2025 season squads plus some free agents. The ratings are rough placeholders.** Replace it with current squads before playing seriously.
+`server/src/data/players.csv` holds about 400 players. It contains the IPL 2025 squads, which still decide each franchise's retention pool, plus IPL players from 2008 onward as free agents. **Every rating reflects the player's IPL prime and is an estimate.** Base prices are derived from the rating. Edit any row freely.
 
 Columns:
 

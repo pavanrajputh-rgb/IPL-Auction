@@ -40,6 +40,10 @@ export class Room {
     this.accelNominations = {};
     this.paused = false;
     this.pausedAt = 0;
+    // Host-controlled options, set in the lobby
+    //   aiRetention: 'auto'    → AI teams pick their own retentions
+    //                'release' → AI teams release everyone into the auction
+    this.settings = { aiRetention: 'auto' };
     this.log = [];
     this.lastActive = Date.now();
   }
@@ -61,6 +65,20 @@ export class Room {
   timerMs() { return this.round === 'main' ? RULES.bidTimerMs : RULES.accelTimerMs; }
 
   // ───────────────────────── lobby ─────────────────────────
+  setSettings(token, patch = {}) {
+    this.requireHost(token);
+    this.requirePhase('lobby');
+    if ('aiRetention' in patch) {
+      if (!['auto', 'release'].includes(patch.aiRetention)) fail('Unknown retention option');
+      this.settings.aiRetention = patch.aiRetention;
+    }
+  }
+
+  /** What an AI-run team retains, according to the host's setting. */
+  aiRetentionPicks(teamId) {
+    return this.settings.aiRetention === 'release' ? [] : aiRetain(teamId, this.players);
+  }
+
   join(token, name) {
     const existing = this.humans.get(token);
     this.humans.set(token, { name: name?.trim().slice(0, 24) || existing?.name || 'Guest', teamId: existing?.teamId ?? null });
@@ -90,7 +108,7 @@ export class Room {
     if (this.phase === 'lobby') return;
     team.isAI = true;
     if (this.phase === 'retention' && !team.retentionConfirmed) {
-      team.retentionPicks = aiRetain(team.id, this.players);
+      team.retentionPicks = this.aiRetentionPicks(team.id);
       this.applyRetention(team);
       this.checkRetentionDone();
     }
@@ -108,10 +126,12 @@ export class Room {
     for (const team of Object.values(this.teams)) {
       if (team.owner) continue;
       team.isAI = true;
-      team.retentionPicks = aiRetain(team.id, this.players);
+      team.retentionPicks = this.aiRetentionPicks(team.id);
       this.applyRetention(team);
     }
-    this.addLog('Retention window is open');
+    this.addLog(this.settings.aiRetention === 'release'
+      ? 'Retention window is open. AI teams have released all their players'
+      : 'Retention window is open');
     this.checkRetentionDone();
   }
 
@@ -141,7 +161,9 @@ export class Room {
     team.purse -= cum[team.retentionPicks.length];
     team.retentionConfirmed = true;
     const names = team.retentionPicks.map(id => this.players[id].name).join(', ');
-    this.addLog(names ? `${team.id} retained ${names}` : `${team.id} retained nobody`);
+    if (names || !team.isAI || this.settings.aiRetention !== 'release') {
+      this.addLog(names ? `${team.id} retained ${names}` : `${team.id} retained nobody`);
+    }
   }
 
   checkRetentionDone() {
@@ -330,6 +352,7 @@ export class Room {
       paused: this.paused,
       serverNow: now,
       rules: RULES,
+      settings: this.settings,
       you: { name: me?.name, teamId: me?.teamId ?? null, isHost: this.isHost(token) },
       people: [...this.humans.values()].map(h => ({ name: h.name, teamId: h.teamId })),
       teams: Object.values(this.teams).map(t => ({

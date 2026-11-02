@@ -18,6 +18,7 @@ export default function Retention() {
 
       <h2 className="section-title">Retention status</h2>
       <p className="muted small">
+        {state.settings.aiRetention === 'release' ? 'AI teams have released all their players. ' : ''}
         Retention costs: 1 player {money(cum[1])}, 2 players {money(cum[2])}, 3 players {money(cum[3])} in total.
       </p>
       <ul className="status-list">
@@ -26,9 +27,10 @@ export default function Retention() {
             <span className="team-chip">{t.id}</span>
             <span className="status-who">{t.isAI ? 'AI' : t.ownerName}</span>
             <span className="status-what">
-              {t.retentionConfirmed
-                ? (t.retentionPicks.length ? t.retentionPicks.map(id => players[id]?.name).join(', ') : 'No retentions')
-                : 'Choosing…'}
+              {!t.retentionConfirmed ? 'Choosing…'
+                : t.retentionPicks.length ? t.retentionPicks.map(id => players[id]?.name).join(', ')
+                : t.isAI && state.settings.aiRetention === 'release' ? 'All players released by host'
+                : 'No retentions'}
             </span>
             {you.isHost && !t.retentionConfirmed && !t.isAI && (
               <button className="btn btn-small btn-ghost" onClick={() => send('handToAI', { teamId: t.id })}>Hand to AI</button>

@@ -74,8 +74,9 @@ export function aiWalkAway(team, player, players) {
     * spendPressure(team)
     * rand(0.8, 1.2);
 
-  // Purse discipline: only true stars may take up to half the purse
-  const share = player.rating >= 88 ? 0.5 : player.rating >= 80 ? 0.3 : 0.15;
+  // Purse discipline: no single player takes more than ~28% of the purse
+  // (keeps the record buy near real-auction levels, about ₹27 Cr)
+  const share = player.rating >= 90 ? 0.28 : player.rating >= 84 ? 0.18 : player.rating >= 78 ? 0.12 : 0.06;
   cap = Math.min(cap, team.purse * share);
 
   // Squad-filling: under the minimum, always willing to pay base for a needed role

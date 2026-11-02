@@ -79,6 +79,7 @@ io.on('connection', socket => {
     }
   });
 
+  action('setSettings',       (r, t, p)    => r.setSettings(t, p));
   action('pickTeam',          (r, t, p)    => r.pickTeam(t, p.teamId));
   action('leaveTeam',         (r, t)       => r.leaveTeam(t));
   action('handToAI',          (r, t, p, n) => r.handToAI(t, p.teamId, n));

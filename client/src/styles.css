@@ -119,6 +119,22 @@ button, input { font: inherit; color: inherit; }
 .team-tile-owner { font-size: 13px; opacity: 0.8; margin-top: 6px; }
 .lobby-foot { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 28px; }
 
+/* lobby setting: AI retentions */
+.setting {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 24px; align-items: center;
+  margin-top: 24px; padding: 18px 20px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md);
+}
+.setting-title { font: 700 22px/1.1 var(--display); margin: 0 0 4px; }
+.setting-text p { margin: 0; }
+.setting-hint { grid-column: 1 / -1; color: var(--muted); margin: 6px 0 0; }
+.setting-value { margin: 0; }
+.segmented { display: inline-flex; border: 1px solid var(--line); border-radius: var(--r-sm); overflow: hidden; }
+.segment { background: transparent; border: 0; padding: 10px 16px; font-weight: 600; cursor: pointer; color: var(--muted); }
+.segment + .segment { border-left: 1px solid var(--line); }
+.segment.is-on { background: var(--gold); color: var(--gold-ink); }
+@media (max-width: 700px) { .setting { grid-template-columns: 1fr; } .segmented { width: 100%; } .segment { flex: 1; } }
+
 /* ───────── app shell ───────── */
 .app { min-height: 100vh; display: flex; flex-direction: column; }
 .header {

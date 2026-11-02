@@ -45,6 +45,8 @@ export default function Lobby() {
         })}
       </div>
 
+      <AiRetentionSetting />
+
       <div className="lobby-foot">
         <p className="muted">
           {people.length} in the room
@@ -58,5 +60,46 @@ export default function Lobby() {
         </div>
       </div>
     </div>
+  );
+}
+
+const AI_RETENTION_OPTIONS = [
+  { value: 'auto', label: 'AI teams retain', hint: 'Each AI franchise keeps up to 3 of its best players, paying the usual retention cost.' },
+  { value: 'release', label: 'Release all AI players', hint: 'AI franchises keep nobody. Their whole squads go into the auction and they start with the full ₹120 Cr.' },
+];
+
+/** Host decides what AI-run teams do at retention. Human teams always choose their own. */
+function AiRetentionSetting() {
+  const { state, send } = useGame();
+  const current = state.settings.aiRetention;
+  const chosen = AI_RETENTION_OPTIONS.find(o => o.value === current);
+
+  return (
+    <section className="setting">
+      <div className="setting-text">
+        <h2 className="setting-title">AI team retentions</h2>
+        <p className="muted small">
+          Applies to every franchise run by AI. Players who claimed a team always choose their own retentions.
+        </p>
+      </div>
+      {state.you.isHost ? (
+        <div className="segmented" role="radiogroup" aria-label="AI team retentions">
+          {AI_RETENTION_OPTIONS.map(o => (
+            <button
+              key={o.value}
+              role="radio"
+              aria-checked={current === o.value}
+              className={`segment ${current === o.value ? 'is-on' : ''}`}
+              onClick={() => send('setSettings', { aiRetention: o.value })}
+            >
+              {o.label}
+            </button>
+          ))}
+        </div>
+      ) : (
+        <p className="setting-value">Host has chosen: <b>{chosen.label}</b></p>
+      )}
+      <p className="setting-hint small">{chosen.hint}</p>
+    </section>
   );
 }

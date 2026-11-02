@@ -1,0 +1,16 @@
+{
+  "name": "ipl-auction",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multiplayer IPL-style player auction with AI franchises",
+  "scripts": {
+    "install:all": "npm install --include=dev && npm --prefix server install && npm --prefix client install --include=dev",
+    "dev": "concurrently -n server,client -c yellow,cyan \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start",
+    "simulate": "npm --prefix server run simulate"
+  },
+  "devDependencies": {
+    "concurrently": "8.2.2"
+  }
+}
